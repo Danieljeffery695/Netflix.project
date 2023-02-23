@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="Showcase">
+        <div class="Showcase-top">
+          <img src="data:image/png;base64,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" 
+          alt="Netflix"
+          class="Showcase-top-img">
+          <a href="#" class="btn btn-rounded">Sign in</a>
+        </div>
+        <div class="Showcase-content">
+            <h1>See What next</h1>
+            <p class="text-p">Watch anyWhere. Cancel anytime</p>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <fieldset class="input-field">
+                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+                <button class="another-btn"><a href="#" class="button-a">Get Started</a></button>
+            </fieldset>
+        </div>
+    </header>
+
+    <section class="tabs">
+        <div class="container">
+            <div id="tab-1" class="tab-item tab-border">
+                <i class="fas fa-door-open fa-3x"></i>
+                <p class="hide-sm">Cancel Anytime</p>
+            </div>
+            <div class="container">
+                <div id="tab-2" class="tab-item tab-border">
+                    <i class="fas fa-tablet-alt fa-3x"></i>
+                    <p class="hide-sm">Watch anyWhere</p>
+                </div>
+            </div>
+            <div class="container">
+                <div id="tab-3" class="tab-item tab-border">
+                    <i class="fas fa-tags fa-3x"></i>
+                    <p class="hide-sm">Pick your price</p>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section class="tab-content">
+            
+            <div class="container">
+                <div id="tab-content-1" class="tab-content-item" show>
+                    <div class="tab-1-content-inner">
+                        <div>
+                            <p class="text-lg">if you decide Netflix isn't for your - no problem. <br> No commitment.  Cancel online anytime.</p>
+                            <a href="#" class="btn btn-lg">Watch Free For 30 Days</a>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1589388107017-6f60aad8387f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNTgwfDB8MXxzZWFyY2h8Mjl8fG5ldGZsaXglMjBjYW5jZWwlMjBwbGFufGVufDB8fHx8MTY3NzAxMjc3MA&ixlib=rb-4.0.3&q=80&w=400" alt="Netflix pics" class="cancel-img">
+                    
+                     <div id="tab-2-content" class="tab-content-item">
+                         <div class="tab-2-content-top">
+                            <p class="text-lg">Watch TV shows and movies anytime, <br> anywhere - personalized for you.</p>
+                            <a href="#" class="btn btn-lg">Watch free for 30 Days</a>
+                         </div>
+                         <div class="tab-2-content-bottom">
+                            <div>
+                                <img src="https://occ-0-5542-1168.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABfpnX3dbgjZ-Je8Ax3xn0kXehZm_5L6-xe6YSTq_ucht9TI5jwDMqusWZKNYT8DfGudD0_wWVVTFLiN2_kaQJumz2iivUWbIbAtF.png?r=11f" alt="img-1" class="img-3">
+                                <p class="text-md">Watch kids show anywhere and anytime</p>
+                                <p class="text-dark">Smark Tvs, playstation, Xbox, Chromecast, <br> Apple TV, Blu-ray, players and more.</p>
+                            </div>
+
+                            <div>
+                                <img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNTgwfDB8MXxzZWFyY2h8MTJ8fG5ldGZsaXglMjBjYW5jZWwlMjBwbGFufGVufDB8fHx8MTY3NzAxMjc3MA&ixlib=rb-4.0.3&q=80&w=400" class="img-1" alt="img-2">
+                                <p class="text-md">Watch instantly or download for later</p>
+                                <p class="text-dark">Available on phone and tablet, wherever you go.</p>
+                            </div>
+
+                            <div>
+                                <img src="https://images.unsplash.com/flagged/photo-1590183030142-efad5a97612f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNTgwfDB8MXxzZWFyY2h8OHx8bmV0ZmxpeCUyMGNhbmNlbCUyMHBsYW58ZW58MHx8fHwxNjc3MDEyNzcw&ixlib=rb-4.0.3&q=80&w=400" class="img-2" alt="img-1">
+                                <p class="text-md">Use any computer</p>
+                                <p class="text-dark">Watch right on Netflix.com</p>
+                            </div>
+                         </div>
+                      </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div id="tab-3-content" class="tab-content-item">
+              <div class="text-center">
+                <p class="text-lg">Choose one plan and watch everything on Netflix</p>
+                <a href="#" class="btn btn-lg">Watch Free for 30 Days</a>
+              </div>
+
+              <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Basic</th>
+                        <th>Standard</th>
+                        <th>Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Montly Price after free month ends on 6/19/19</td>
+                        <td>$5.99</td>
+                        <td>$10.99</td>
+                        <td>$15.99</td>
+                    </tr>
+                    <tr>
+                        <td>HD Available</td>
+                        <td><i class="fas fa-items"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Ultra HD Available</td>
+                        <td><i class="fas fa-times"></i></td>
+                        <td><i class="fas fa-times"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Screens you can watch on at the same time</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Watch on your laptop, Tv, phone and tablet</td>
+                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Ulimited movies and TV shows</td>
+                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Cancel anytime</td>
+                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>First month Free</td>
+                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        </section>
+
+        <!--footer content here-->
+        <footer class="footer">
+            <p>Question? Call ##</p>
+            <div class="footer-cols">
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Ways to watchs</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                    <li><a href="#">Netflix Originals</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Term Of Use</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Redeem Gift Cards</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Speed Test</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Media Center</a></li>
+                    <li><a href="#">Buy Gift Cards</a></li>
+                    <li><a href="#">Cookie Preferences</a></li>
+                    <li><a href="#">Legal Notices</a></li>
+                </ul>
+            </div>
+        </footer>
+</body>
+</html>
